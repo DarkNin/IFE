@@ -1,0 +1,28 @@
+.checkbox{
+display:none;
+}
+#circleBox{
+
+}
+
+.labelCheck{
+display:block;
+background:url('sprite.png') 0 0 no-repeat;
+width:25px;
+height:25px;
+line-height:0;
+font-size:0;
+overflow:hidden;
+}
+
+#squareLabel{
+background-position:0 -25px;
+}
+
+#circleBox:checked ~ #circleLabel{
+background-position:-26px 0;
+}
+
+#squareBox:checked ~ #squareLabel{
+background-position:-26px -25px;
+}
