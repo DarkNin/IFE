@@ -18,8 +18,8 @@ window.onload = function(){
 				maxX = areaX - menuX,
 				maxY = areaY - menuY;
 		if(mouseLocate().x <= maxX && mouseLocate().y <= maxY){
-		    document.menu.style.left = mouseLocate().x + "px";
-				document.menu.style.top = mouseLocate().y + "px";
+		    menu.style.left = mouseLocate().x + "px";
+				menu.style.top = mouseLocate().y + "px";
 		}else if(mouseLocate().x > maxX && mouseLocate().y > maxY){
 				menu.style.left = mouseLocate().x - menuX + "px";
 				menu.style.top = mouseLocate().y -menuY + "px";
