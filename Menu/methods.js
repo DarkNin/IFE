@@ -10,38 +10,39 @@ window.onload = function(){
 	document.getElementById('menuArea').addEventListener('contextmenu', function(e){
 		e.stopPropagation();
 		e.preventDefault();
-		var areaX = document.getElementById('menuArea').offsetWidth,
+		var menu = document.getElementById('menu'),
+				areaX = document.getElementById('menuArea').offsetWidth,
 				areaY = document.getElementById('menuArea').offsetHeight,
-				menuX = document.getElementById('menu').offsetWidth,
-				menuY = document.getElementById('menu').offsetHeight,
+				menuX = menu.offsetWidth,
+				menuY = menu.offsetHeight,
 				maxX = areaX - menuX,
 				maxY = areaY - menuY;
 		if(mouseLocate().x <= maxX && mouseLocate().y <= maxY){
-		    document.getElementById('menu').style.left = mouseLocate().x + "px";
-				document.getElementById('menu').style.top = mouseLocate().y + "px";
+		    document.menu.style.left = mouseLocate().x + "px";
+				document.menu.style.top = mouseLocate().y + "px";
 		}else if(mouseLocate().x > maxX && mouseLocate().y > maxY){
-				document.getElementById('menu').style.left = mouseLocate().x - menuX + "px";
-				document.getElementById('menu').style.top = mouseLocate().y -menuY + "px";
+				menu.style.left = mouseLocate().x - menuX + "px";
+				menu.style.top = mouseLocate().y -menuY + "px";
 		}else if(mouseLocate().x > maxX) {
-				document.getElementById('menu').style.left = mouseLocate().x - menuX + "px";
-				document.getElementById('menu').style.top = mouseLocate().y + "px";
+				menu.style.left = mouseLocate().x - menuX + "px";
+				menu.style.top = mouseLocate().y + "px";
 		}else if(mouseLocate().y > maxY){
-				document.getElementById('menu').style.top = mouseLocate().y -menuY + "px";
-				document.getElementById('menu').style.left = mouseLocate().x + "px";
+				menu.style.top = mouseLocate().y -menuY + "px";
+				menu.style.left = mouseLocate().x + "px";
 		}
-		document.getElementById('menu').style.visibility = 'visible';
+		menu.style.visibility = 'visible';
 	});
-	document.getElementById('menu').addEventListener('click', function(e){
+	menu.addEventListener('click', function(e){
 		e.preventDefault();
 		e.stopPropagation();
 	})
-	document.getElementById('menu').addEventListener('contextmenu', function(e){
+	menu.addEventListener('contextmenu', function(e){
 		e.preventDefault();
 		e.stopPropagation();
 	})
 	document.getElementById('main').addEventListener('click', function(e){
-		document.getElementById('menu').style.visibility = 'hidden';
-		document.getElementById('menu').style.left = "0px";
-		document.getElementById('menu').style.top = "0px";
+		menu.style.visibility = 'hidden';
+		menu.style.left = "0px";
+		menu.style.top = "0px";
 	})
 }
