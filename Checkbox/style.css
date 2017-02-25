@@ -1,9 +1,7 @@
-.checkbox{
+.checkbox, .radio{
 display:none;
 }
-#circleBox{
 
-}
 
 .labelCheck{
 display:block;
@@ -25,4 +23,23 @@ background-position:-26px 0;
 
 #squareBox:checked ~ #squareLabel{
 background-position:-26px -25px;
+}
+
+.labelRadio{
+display:inline-block;
+background:url('sprite.png') 0 0 no-repeat;
+width:25px;
+height:25px;
+line-height:0;
+font-size:0;
+overflow:hidden;
+
+}
+
+#radioA:checked ~ #ALabel{
+background-position:-26px 0;
+}
+
+#radioB:checked ~ #BLabel{
+background-position:-26px 0;
 }
