@@ -1,0 +1,47 @@
+.board{
+position:absolute;
+background:url('board.jpg') 0 0 no-repeat;
+height:525px;
+width:700px;
+transition-duration:700ms;
+}
+.insideBox{
+visibility:visible;
+opacity:1;
+position:relative;
+text-align:center;
+line-height:535px;
+font-size:40px;
+background: -webkit-linear-gradient(right, red, greenyellow, blue);
+animation:anime 1s;
+animation-iteration-count:infinite;
+transition-duration:500ms;
+}
+@keyframes anime{
+0%{
+background: -webkit-linear-gradient(right, red, greenyellow, blue);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+50%{
+background: -webkit-linear-gradient(right, green, yellow, red);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+100%{
+background: -webkit-linear-gradient(right, brown, purple, pink);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+}
+.board:hover{
+background:url('boardblur.jpg') 0 0 no-repeat;
+transition-duration:500ms;
+}
+
+.board:hover > .insideBox{
+visibility:visible;
+opacity:1;
+line-height:525px;
+transition-duration:900ms;
+}
